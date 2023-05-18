@@ -1,0 +1,13 @@
+.highlighted {
+  background-color: darkgrey;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+tr:hover {
+  background-color: darkgrey;
+  transition: 0.1s ease-out;
+}
+td.checkbox {
+  width: 100%;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.actionButton {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.actionButton_delete {
+  width: 100%;
+  max-width: 150px;
+  height: 35px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.PaginationButtons {
+  height: 100px;
+}
+.actionButton_delete:disabled {
+  border: 1px solid #7f8fa6;
+  color: #7f8fa6;
+  background-color: #dcdde1;
+}
+@media (max-width: 480px) {
+  .actionButton_delete {
+    width: 100%;
+    max-width: none;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 591px) and (max-width: 768px) {
+  .actionButton {
+    justify-content: center;
+    /* width: 150px; */
+  }
+}

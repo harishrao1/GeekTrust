@@ -1,0 +1,32 @@
+.actionButton {
+  width: 35px;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #00a8ff;
+  line-height: 100%;
+  font-size: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.actionButton.selected {
+  border: 1px solid #ec5712;
+  background-color: #fff;
+  color: #034a6d;
+}
+.actionButton:disabled {
+  border: 1px solid #7f8fa6;
+  color: #7f8fa6;
+  background-color: #dcdde1;
+  cursor: not-allowed;
+}
+@media (max-width: 480px) {
+  .actionButton button {
+    font-size: 12px;
+    margin-right: 0.5rem;
+  }
+}
