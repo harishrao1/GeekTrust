@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
 * {
   box-sizing: border-box;
   font-size: 14px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Space Grotesk", "Montserrat", sans-serif;
 }
 
 html,

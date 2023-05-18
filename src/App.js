@@ -13,6 +13,7 @@ function App() {
     performApiCall();
   }, []);
 
+  // Perform API call to fetch user Data
   const performApiCall = async () => {
     try {
       const response = await axios.get(API_URL);
@@ -25,10 +26,12 @@ function App() {
       }));
       setUserData(response.data);
     } catch (error) {
+      setError(error);
       console.log(error);
     }
   };
 
+  // Handle search funtionality
   const handleSearch = (event) => {
     const searchText = event.target.value.toLowerCase();
     const temp = [...userData];
@@ -46,6 +49,7 @@ function App() {
     setUserData(data);
   };
 
+  // Handle delete Functionality
   const handleDelete = (id) => {
     const temp = [...userData];
     const data = temp.map((user) => {
@@ -57,6 +61,7 @@ function App() {
     setUserData(data);
   };
 
+  // Delete all selected Users
   const deleteAll = (items) => {
     const data = [...userData];
     data.forEach((user) =>
@@ -69,6 +74,7 @@ function App() {
     setUserData(data);
   };
 
+  // Handle checkbox select/deselect
   const handleSelect = (event, user) => {
     const temp = [...userData];
     const index = temp.indexOf(user);
@@ -81,6 +87,7 @@ function App() {
     setUserData(temp);
   };
 
+  // Handle select all checkbox
   const handleSelectAll = (event, items) => {
     const current = event.target;
     const temp = [...userData];
@@ -105,6 +112,7 @@ function App() {
     setUserData(temp);
   };
 
+  //handle Edit Funationality
   const handleEdit = (user) => {
     const temp = [...userData];
     const index = temp.indexOf(user);
@@ -112,6 +120,7 @@ function App() {
     setUserData(temp);
   };
 
+  //handle editing of user Data
   const handleValueEdit = (user, editValue) => {
     const temp = [...userData];
     const index = temp.indexOf(user);
